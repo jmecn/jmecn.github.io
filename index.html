@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
     <meta name="description" content="jMonkeyEngine是一个跨平台的3D游戏开发引擎，本网站为中国的JME爱好者所建立。">
-    <meta name="author" content="yanmaoyuan">
+    <meta name="author" content="115050813@qq.com">
     <link rel="icon" href="img/favicon.ico">
     
-    <title>jME中文网</title>
+    <title>jME爱好者之家</title>
 
     <!-- Bootstrap -->
     <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -33,13 +33,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="img/text-header.png" witdh="175px" height="40px" alt="jMonkeyEngine中文网"/></a>
+          <a class="navbar-brand" href="#"><img src="img/text-header.png" witdh="175px" height="40px" alt="jME爱好者之家"/></a>
           
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">主页</a></li>
-            <li><a href="bbs.jmecn.net">论坛</a></li>
+            <li><a href="http://bbs.jmecn.net" target="_blank">中文论坛</a></li>
             <li><a href="https://jmonkeyengine.github.io/wiki" target="_blank">文档</a></li>
             <li><a href="https://github.com/jMonkeyEngine/sdk/releases/tag/stable" target="_blank">下载</a></li>
             <li><a href="https://github.com/jMonkeyEngine/jmonkeyengine" target="_blank">源码</a></li>
@@ -52,13 +52,10 @@
       </div>
     </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>花果山福地，水帘洞洞天</h1>
-        <p>猴子你好！</p>
-        <p>我是一名Java程序猿，从学编程的第一天开始就想做游戏，但是所有的游戏开发资料都是使用C++开发，似乎游戏行业并不欢迎Java！可我偏要用Java做游戏！这个执念直到我遇到了jME，终于可以实现了！</p>
-        <p>本网站专门为想用Java游戏的程序猿所建立，目前我正在翻译jME的中文资料，翻译完成后将陆续发布在本站。另外：www.jmecn.net域名正在申请备案。</p>
+        <h1>jMonkeyEngine</h1>
+        <p>为勇于创新的Java开发人员设计的跨平台游戏引擎</p>
         <p><a class="btn btn-primary btn-lg" href="https://github.com/jMonkeyEngine/sdk/releases/tag/stable" target="_blank" role="button">下载&nbsp;JME SDK &raquo;</a></p>
       </div>
     </div>
@@ -67,12 +64,12 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>jME是什么?</h2>
+          <h2>jME3是什么?</h2>
           <p>jMonkeyEngine(简称jME)是一款免费、开源的游戏引擎，专门为那些希望用最新技术创作3D游戏的Java程序猿而制作。该引擎采用纯Java开发，目的是让更多人能够使用，并且软件部署时间也更短。 </p>
         </div>
         <div class="col-md-4">
-          <h2>jME为谁而来?</h2>
-          <p>jME与可视化的RPG Maker或FPS modder不同，你得懂一点编程知识才会得到jME的全力支持。大胆前进，jME将会是所有向往3D游戏开发人员的起点。 </p>
+          <h2>jME3为谁而来?</h2>
+          <p>jME3与可视化的RPG Maker或FPS modder不同，你得懂一点编程知识才会得到jME的全力支持。大胆前进，jME将会是所有向往3D游戏开发人员的起点。 </p>
        </div>
         <div class="col-md-4">
           <h2>Java非常火爆!</h2>
@@ -88,14 +85,35 @@
        </div>
         <div class="col-md-4">
           <h2>丰富的文档和支持</h2>
-          <p>我们没有理由不做好文档，事实上jME拥有极其丰富的文档，并且持续扩充。仔细研读jME的wiki网页，那儿有几百页的内容详细说明jME3的所有事项。不但如此，jME还有开发者社区，那儿很热闹而且还有各种最新的帮助。</p>
+          <p>我们没有理由不做好文档，事实上jME拥有极其丰富的文档，并且持续扩充。仔细研读jME的wiki网页，那儿有几百页的内容详细说明jME3的所有事项。不但如此，jME3还有开发者社区，那儿很热闹而且还有各种最新的帮助。</p>
         </div>
+      </div>
+      
+      <h1>Graphics 图形</h1>
+      <div class="row">
+      	<div class="col-md-4">
+      	  <h2>Lights and Shadows</h2>
+      	  <h2>光和影</h2>
+      	  <p>jME3提供所有常用手段来模拟烛光、阳光、闪光和全局光照，阴影效果用类似PSSM和SSAO等技术实现。对于Android系统，我们推荐使用烘焙阴影(baked shadows)效果。</p>
+      	</div>
+      	
+      	<div class="col-md-4">
+      	  <h2>Shaders and Materials</h2>
+      	  <h2>染色器和材质</h2>
+      	  <p>jME3的材质系统完全基于Shader(染色器)技术实现，采用称为Shader Nodes的创新设计来将染色器超级模块化，能够在可视化编辑器中进行编辑。当然，你依然可以手动编写染色器代码。</p>
+      	</div>
+      	
+      	<div class="col-md-4">
+      	  <h2>Filters and Effects</h2>
+      	  <h2>滤镜和特效</h2>
+      	  <p>基于后置处理器(PostProcessor)、滤镜(Filter)以及粒子发射器(ParticleEmitter)等技术，jME3能够实现多种多样的特效。这都是一些给人制造错觉的技巧，jME3用这些技巧模拟各种奇妙的自然现象，比如水体、雾化、折射、爆炸等特效。</p>
+      	</div>
       </div>
 
       <hr>
 
       <footer>
-        <p><a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备16014743号</a> &copy; yan 2016</p>
+        <p> &copy;2016~2018&nbsp;jmecn.net&nbsp;版权所有&nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备16014743号</a></p>
       </footer>
     </div> <!-- /container -->
     
