@@ -4,13 +4,6 @@ body {
   padding-bottom: 20px;
 }
 
-.jme3_card_title{
-    background-size: cover;
-    height: 110px;
-    color: #ffffff;
-    text-shadow: 0px 0px 7px #000000;
-}
-
 .light{
     background: url("../img/elephant.png");
 }
@@ -53,4 +46,12 @@ body {
     width:50vh;
     min-height: 50vh;
     align-self: flex-end;
+}
+
+
+.jme3_card_title{
+    background-size: cover;
+    height: 110px;
+    color: #ffffff;
+    text-shadow: 0px 0px 7px #000000;
 }
