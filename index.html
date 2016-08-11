@@ -93,25 +93,20 @@
       <div class="row">
       	<div class="col-md-4">
       	  <div class="jme3_card_title light">
-      	    <h2>Lights and Shadows</h2>
       	    <h2>光和影</h2>
       	  </div>
-      	  
       	  <p>jME3提供所有常用手段来模拟烛光、阳光、闪光和全局光照，阴影效果用类似PSSM和SSAO等技术实现。对于Android系统，我们推荐使用烘焙阴影(baked shadows)效果。</p>
       	</div>
       	
       	<div class="col-md-4">
       	  <div class="jme3_card_title shader">
-      	    <h2>Shaders and Materials</h2>
       	    <h2>染色器和材质</h2>
       	  </div>
-      	  
       	  <p>jME3的材质系统完全基于染色器(Shader)技术实现，采用称为Shader Nodes的创新设计来将染色器超级模块化，使其能够在可视化编辑器中进行编辑。当然，你依然可以手动编写染色器代码。</p>
       	</div>
       	
       	<div class="col-md-4">
       	  <div class="jme3_card_title filter">
-      	    <h2>Filters and Effects</h2>
       	    <h2>滤镜和特效</h2>
       	  </div>
       	  <p>jME3使用后置处理器(PostProcessor)、滤镜(Filter)以及粒子发射器(ParticleEmitter)等技术，能够实现多种多样的特效，比如水面反射、雾化、光照散射、爆炸特效等。</p>
@@ -122,28 +117,23 @@
       <div class="row">
       	<div class="col-md-4">
           <div class="jme3_card_title appstate">
-            <h2>Application States</h2>
       	    <h2>应用程序状态</h2>
           </div>
-      	  <p></p>
+      	  <p>应用程序状态(AppState)是创建应用程序的基本组件。它们可以帮你把应用程序分割成几个逻辑模块，也可以用来快速扩展基础应用程序。AppState还可以在其它应用程序中复用，这样你就能迅速创建自己的AppState库，把其它扩展程序纳入到自己的应用程序里。</p>
       	</div>
       	
       	<div class="col-md-4">
       	  <div class="jme3_card_title control">
-            <h2>Custom Controls</h2>
       	    <h2>自定义控件</h2>
           </div>
-      	  
-      	  <p></p>
+      	  <p>自定义控件(Custom Control)和AppState类似，但是它们是基于更小的场景对象级别的。用自定义控件，你可以给场景图中的对象添加功能，赋予它们生命，控制它，或者把它合并到另外的工作流中。</p>
       	</div>
       	
       	<div class="col-md-4">
           <div class="jme3_card_title input">
-            <h2>Input</h2>
       	    <h2>输入</h2>
           </div>
-      	  
-      	  <p></p>
+      	  <p>基于统一标准的输入用具，jME3可以广泛应用于各种平台，允许用户使用键盘、手柄和触屏等不同方式来在操作同一界面。</p>
       	</div>
       </div>
  
@@ -154,8 +144,7 @@
             <h2>Physics</h2>
       	    <h2>物理</h2>
           </div>
-      	  
-      	  <p></p>
+          <p>jME3依赖jBullet实现物理仿真。jBullet是<a href="http://bulletphysics.org/wordpress/">Bullet Physics Library</a>的一个Java接口，业内顶尖高手都喜欢用它。</p>
       	</div>
       	
       	<div class="col-md-4">
@@ -163,8 +152,7 @@
             <h2>Terrain</h2>
       	    <h2>地形</h2>
           </div>
-      	  
-      	  <p></p>
+      	  <p>你可以使用SDK内嵌的TerraMonkey地形编辑器来实现地形的雕刻和着色。当然你还可以导入高度图(Height Map)，把它放在天空盒(SkyBox)中，添加光照，享受自动LOD优化。</p>
       	</div>
       	
       	<div class="col-md-4">
@@ -172,8 +160,7 @@
             <h2>Cinematics</h2>
       	    <h2>电影制作</h2>
           </div>
-      	  
-      	  <p></p>
+      	  <p>借助几个电影制作工具，就可以用自己修剪的场景来创建小电影了。只需要几条协调好的动作路径和声音时间，不需要太多关键帧就能讲述一个好故事。</p>
       	</div>
 
       	<div class="col-md-4">
@@ -181,8 +168,7 @@
             <h2>Networking</h2>
       	    <h2>联网</h2>
           </div>
-      	  
-      	  <p></p>
+      	  <p>SpiderMonkey(jME3的网络组件)可以帮助你开发联网游戏。如果你已经熟知UDP、TCP、压缩和线程安全等概念，就可以直接使用它了。</p>
       	</div>
       	
       	<div class="col-md-4">
@@ -190,8 +176,7 @@
             <h2>GUI</h2>
       	    <h2>图形用户界面</h2>
           </div>
-      	  
-      	  <p></p>
+      	  <p>NiftyGUI是一个独立的库，它与jME3整合在一起作为系统默认的GUI工具。设计人员和开发人员都可以用XML或者Java构建界面。不过由于每个程序猿都是不一样的，所以我们提供两套独立的GUI插件供选择。(译者：实际感受<a href="https://github.com/jMonkeyEngine-Contributions/Lemur" target="_blank">Lemur</a>比NiftyGUI更好用。)</p>
       	</div>
       </div>
       
