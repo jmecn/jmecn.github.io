@@ -3,3 +3,54 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+
+.jme3_card_title{
+    background-size: cover;
+    height: 110px;
+    color: #ffffff;
+    text-shadow: 0px 0px 7px #000000;
+}
+
+.light{
+    background: url("../img/elephant.png");
+}
+.shader{
+    background: url("../img/toon-dino.png");
+}
+.filter{
+    background: url("../img/water-bg.jpg");
+}
+
+.appstate{
+    background: url("../img/appstate.png");
+}
+.control{
+    background: url("../img/control.png");
+}
+.input{
+    background: url("../img/controller.jpg");
+}
+
+.physics{
+    background: url("../img/physics.jpg");
+}
+.terrain{
+    background: url("../img/terrain.jpg");
+}
+.cinematics{
+    background: url("../img/cinematics.png");
+}
+
+.networking{
+    background: url("../img/networking.jpg");
+}
+.gui{
+    background: url("../img/gui.png");
+}
+.brand{
+    background: url("../img/monkeyx2.png");
+    background-size: cover;
+    width:50vh;
+    min-height: 50vh;
+    align-self: flex-end;
+}
