@@ -61,7 +61,7 @@
     </div>
 
     <div class="container">
-      <h1>jME3简介</h1>
+      <h1>简介</h1>
       <div class="row">
         <div class="col-md-4">
           <h2>jME3是什么?</h2>
@@ -81,7 +81,7 @@
         </div>
         <div class="col-md-4">
           <h2>跨平台、跨设备</h2>
-          <p>jME游戏可以发布在Windows，Mac和Linux系统上，也可以发布在Android和iOS系统上。不仅如此，jME还支持任何AR和VR技术所需的外围新设备，最值得一提的是还支持Oculus Rift。</p>
+          <p>jME游戏可以发布在Windows，Mac和Linux系统上，也可以发布在Android和iOS系统上。不仅如此，jME还支持任何<abbr title="Augmented Reality 增强现实">AR</abbr>和<abbr title="Virtual Reality 虚拟现实">VR</abbr>技术所需的外围新设备，最值得一提的是还支持<abbr title="为虚拟现实技术设计的头戴式显示器">Oculus Rift</abbr>。</p>
        </div>
         <div class="col-md-4">
           <h2>丰富的文档和支持</h2>
@@ -95,7 +95,7 @@
       	  <div class="jme3_card_title light">
       	    <h2>光和影</h2>
       	  </div>
-      	  <p>jME3提供所有常用手段来模拟烛光、阳光、闪光和全局光照，阴影效果用类似PSSM和SSAO等技术实现。对于Android系统，我们推荐使用烘焙阴影(baked shadows)效果。</p>
+      	  <p>jME3提供所有常规手段来模拟烛光、阳光、闪光和全局光照，阴影效果用类似<abbr title="平行光阴影映射">PSSM</abbr>和<abbr title="Screen Space Ambient O屏幕空间环境光遮蔽">SSAO</abbr>等技术实现。对于Android系统，我们推荐使用<abbr title="baked shadows">烘焙阴影</abbr>效果。</p>
       	</div>
       	
       	<div class="col-md-4">
@@ -109,7 +109,7 @@
       	  <div class="jme3_card_title filter">
       	    <h2>滤镜和特效</h2>
       	  </div>
-      	  <p>jME3使用后置处理器(PostProcessor)、滤镜(Filter)以及粒子发射器(ParticleEmitter)等技术，能够实现多种多样的特效，比如水面反射、雾化、光照散射、爆炸特效等。</p>
+      	  <p>jME3使用<abbr title="PostProcessor">后置处理器</abbr>、<abbr title="Filter">滤镜</abbr>以及<abbr title="ParticleEmitter">粒子发射器</abbr>等技术，能够实现多种多样的特效，比如水面、雾化、光照散射、爆炸特效等。</p>
       	</div>
       </div>
 
@@ -119,7 +119,8 @@
           <div class="jme3_card_title appstate">
       	    <h2>应用程序状态</h2>
           </div>
-      	  <p>应用程序状态(AppState)是创建应用程序的基本组件。它们可以帮你把应用程序分割成几个逻辑模块，也可以用来快速扩展基础应用程序。AppState还可以在其它应用程序中复用，这样你就能迅速创建自己的AppState库，把其它扩展程序纳入到自己的应用程序里。</p>
+      	  <p>应用程序状态(AppState)是创建应用程序的基本组件。它们可以帮你把应用程序分割成几个逻辑模块，也可以用来快速扩展基础应用程序。</p>
+      	  <p>AppState还可以在其它应用程序中复用，这样你就能迅速创建自己的AppState库，把其它扩展程序纳入到自己的应用程序里。</p>
       	</div>
       	
       	<div class="col-md-4">
@@ -150,7 +151,7 @@
       	  <div class="jme3_card_title terrain">
       	    <h2>地形</h2>
           </div>
-      	  <p>JME3 SDK内嵌地形编辑器(TerraMonkey)可以用来创建地形。你也可以导入高度图，把它放在天空盒中，添加光照，享受自动LOD优化。</p>
+      	  <p>JME3 SDK内嵌地形编辑器(TerraMonkey)可以用来创建地形。你也可以导入<abbr title="HeightMap">高度图</abbr>，把它放在<abbr title="SkyBox，和SkyDome同样用于制作3D天空场景的技术">天空盒</abbr>中，添加光照，享受自动<abbr title="Level of Detail 层次细节">LOD</abbr>优化。</p>
       	</div>
       	
       	<div class="col-md-4">
@@ -164,14 +165,14 @@
       	  <div class="jme3_card_title networking">
       	    <h2>联网</h2>
           </div>
-      	  <p>SpiderMonkey(jME3的网络组件)可以帮助你开发联网游戏。如果你已经熟知UDP、TCP、压缩和线程安全等概念，就可以直接使用它了。</p>
+      	  <p><abbr title="jME3的网络组件">SpiderMonkey</abbr>可以帮助你开发联网游戏。如果你已经熟知UDP、TCP、压缩和线程安全等概念，就可以直接使用它了。</p>
       	</div>
       	
       	<div class="col-md-4">
       	  <div class="jme3_card_title gui">
       	    <h2>图形用户界面</h2>
           </div>
-      	  <p>NiftyGUI是一个独立的库，它与jME3整合在一起作为系统默认的GUI工具。设计人员和开发人员都可以用XML或者Java构建界面。不过由于每个程序猿都是不一样的，所以我们提供两套独立的GUI插件供选择。(译者：实际感受<a href="https://github.com/jMonkeyEngine-Contributions/Lemur" target="_blank">Lemur</a>比NiftyGUI更好用。)</p>
+      	  <p>NiftyGUI是一个独立的库，它与jME3整合在一起作为系统默认的GUI工具。设计人员和开发人员都可以用XML或者Java构建界面。不过由于每个程序猿都是不一样的，所以我们提供两套独立的GUI插件供选择。</p>
       	</div>
       </div>
       
