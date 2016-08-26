@@ -1,0 +1,441 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>3D数学扫盲</title>
+	
+	<link href="extras/highlight/styles/github.css" rel="stylesheet" />
+	<link href="css/jme3-math.css" rel="stylesheet" />
+	
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+您的浏览器<b>不支持</b>impress.js，因此下面呈现的是该演示文档的一份简化版本。
+建议您使用<b>Chrome</b>、<b>Safari</b>或者<b>Firefox</b>等现代浏览器，以获得最佳体验。
+</div>
+	
+<div id="impress"  data-transition-duration="1000">
+
+<div id="cover" class="step slide markdown" data-x="-1080" data-y="0">
+#jMonkeyEngine3数学扫盲
+
+学习JME3中最基本的向量数学
+
+(使用方向键导航)
+
+&copy;[jMonkeyEngine.org](http://jmonkeyengine.org)
+</div>
+	
+<div id="index" class="step slide markdown" data-x="0" data-y="0">
+
+即将学习下列内容：
+
+* [向量](#vector)是什么，如何创建向量？
+* 向量的[加法](#add)、[减法](#substract)、[乘法](#multiple)和[标准化](#normalize)运算。
+* 向量间如何[插值](#interpolate)？
+* [四元数](#quat)是什么，如何创建四元数？
+* 如何利用四元数[旋转](#rotate)向量？
+* 如何[合并旋转](#combine)？
+* 如何利用[lookAt](#lookAt)创建旋转？
+
+</div>
+
+<div id="vector" class="step slide cover markdown" data-rel-x="1080" data-rel-y="0">
+## 向量(Vector)
+
+定义位置和方向
+
+-----
+
+### 向量是什么？
+
+* 向量可以定义位置、方向、力等等。
+* 一个向量包含三个值：x、y和z。
+* 向量长度值也很重要，它的值取决于x值、y值和z值。
+
+-----
+
+* `Vector3f vectorA = new Vector3f(0, 1, 0);`
+
+创建一个值为(0, 1, 0)的向量
+
+* `Vector3f vectorB = new Vector3f(1, 0, 0);`
+
+创建一个值为(1, 0, 0)的向量
+
+* `Vector3f vectorC = new Vector3f(0, 0, 1);`
+
+创建一个值为(0, 0, 1)的向量 (指向你)
+
+* `Vector3f vectorD = new Vector3f(-1, 0, 0);`
+
+创建一个值为(-1, 0, 0)的向量
+
+-----
+
+这些向量的长度都是1。
+
+-----
+
+* `Vector3f vectorE = new Vector3f(1, 1, 0)`
+
+创建一个值为(1, 1, 0)的向量
+
+该向量长度为1.4142，因为[a<sup>2</sup>+b<sup>2</sup>=c<sup>2</sup>](https://en.wikipedia.org/wiki/Pythagoras%23Pythagorean_theorem)
+
+</div>
+
+<div id="operate" class="step slide cover markdown" data-rel-x="1080" data-rel-y="0">
+
+## 基本向量运算
+
+向量加、减、乘和标准化
+
+-----
+
+### 加法
+
+-----
+
+* `Vector3f vectorA = new Vector3f(0, 1, 0);`
+
+创建一个值为(0, 1, 0)的向量
+
+* `Vector3f vectorB = new Vector3f(1, 0, 0);`
+
+创建一个值为(1, 0, 0)的向量
+
+-----
+
+* `Vector3f vectorC = vectorA.add(vectorB);`
+
+向量C = 向量A + 向量B
+
+向量C的值为(1, 1, 0)，长度为1.4142。
+
+</div>
+
+<div id="substract" class="step slide markdown" data-rel-x="1080" data-rel-y="0">
+
+### 减法
+
+-----
+
+* `Vector3f vectorA = new Vector3f(0, 1, 0);`
+* `Vector3f vectorB = new Vector3f(1, 0, 0);`
+
+
+
+`Vector3f vectorC = vectorA.substract(vectorB);`
+
+向量A减向量B结果可以想象成一个箭头，这个箭头从**B的顶端**指向**A的顶端**。
+
+向量C的值为(-1, 1, 0)，长度为1.4142。
+
+</div>
+
+<div id="multiple" class="step slide markdown" data-rel-x="1080" data-rel-y="0">
+### 乘法
+
+-----
+
+* `Vector3f vectorA = new Vector3f(1, 0, 0);`
+
+创建一个值为(1, 0, 0)的向量
+
+-----
+
+* `Vector3f vectorB = vectorA.mult(1.5f);`
+
+将该向量长度乘以1.5倍
+
+向量B的值为(1.5, 0, 0)，长度为1.5。
+
+</div>
+
+<div id="normalize" class="step slide markdown" data-rel-x="1080" data-rel-y="0">
+###　标准化
+
+-----
+
+* `Vector3f vectorA = new Vector3f(1, 1, 0);`
+
+创建一个值为(1, 1, 0)的向量，长度为1.4142
+
+-----
+
+* `Vector3f vectorB = vectorA.normalize();`
+
+把向量A的长度标准化成1
+
+-----
+
+向量B的值为(0.7071, 0.7071, 0)，长度为1。
+
+**它是个标准化向量**
+
+</div>
+
+<div id="interpolate" class="step slide cover markdown" data-rel-x="1080" data-rel-y="0">
+
+## 插值(Interpolate)
+
+使用FastMath类
+
+-----
+
+* `Vector3f vectorA = new Vector3f(0, 1, 0);`
+* `Vector3f vectorB = new Vector3f(1, 0, 0);`
+
+-----
+
+* `Vector3f vectorC = FastMath.interpolateLinear(0.5f, vectorA, vectorB);`
+
+插值到向量A和向量B的中间的位置
+
+向量C的值为(0.5, 0.5, 0.0)，长度为0.7071。
+
+-----
+
+* `vectorC = FastMath.interpolateLinear(0.75f, vectorA, vectorB);`
+
+插值到向量A和向量B的3/4位置
+
+向量C的值为(0.75, 0.25, 0.0)，长度为0.7906。
+
+</div>
+
+<div id="quat" class="step slide cover markdown" data-rel-x="1080" data-rel-y="0">
+
+## 四元数(Quaternion)
+
+JME3中的旋转
+
+-----
+
+### 四元数是什么？
+
+* 四元数可以定义相对旋转。
+* 四元数可以用绕三轴旋转量的方法创建。
+* 四元数可以用角轴对的方式创建。
+
+![rotation-from-axis]
+-----
+
+    Quaternion quatA = new Quaternion();
+    quatA.fromAngleAxis(FastMath.HALF_PI, Vector3f.UNIT_Z);
+
+创建一个四元数，绕Z轴旋转90°。
+
+    Quaternion quatB = new Quaternion();
+    quatB.fromAngleAxis(FastMath.QUARTER_PI, Vector3f.UNIT_Y);
+
+创建一个四元数，绕Y轴旋转45°。
+
+    Quaternion quatC = new Quaternion();
+    float[] angles = new float[]{FastMath.HALF_PI, FastMath.PI, FastMath.PI};
+    quatC.fromAngles(angles);
+
+创建一个四元数，绕X轴旋转90°，绕Y轴旋转180°，再绕Y轴旋转180°。
+
+</div>
+
+<div id="rotate" class="step slide markdown" data-rel-x="1080" data-rel-y="0">
+
+### 旋转向量
+
+用四元数旋转向量
+
+-----
+
+`Vector3f vectorA = new Vector3f(0, 1, 0);`
+
+创建一个值为(0, 1, 0)的向量
+
+`Quaternion roll45 = new Quaternion();`
+`roll45.fromAngleAxis(-FastMath.QUARTER_PI, Vector3f.UNIT_Z);`
+
+创建一个四元数，并设定绕Z轴旋转-45°
+
+-----
+
+`Vector3f vectorB = roll45.mult(vectorA);`
+
+用四元数roll45旋转vectorA，得到向量B。
+
+-----
+
+向量B的值为(0.7071, 0.7071, 0)，长度为1。
+
+</div>
+
+<div id="combine" class="step slide cover markdown" data-rel-x="1080" data-rel-y="0">
+### 合并旋转
+
+用乘法运算把四元数联系起来
+
+-----
+
+#### 合并旋转
+
+* 你可以用乘法运算把四元数联系起来
+* 它们的顺序不能改变，所以A×B != B×A
+* 如果A×B，生成的C是先绕A旋转，后绕B旋转。
+
+-----
+
+    Quaternion quatA = new Quaternion();
+    quatA.fromAngleAxis(-FastMath.HALF_PI, Vector3f.UNIT_Z);
+
+创建一个四元数，绕Z轴旋转-90°
+
+    Quaternion quatB = new Quaternion();
+    quatB.fromAngleAxis(-FastMath.HALF_PI, Vector3f.UNIT_Y);
+	
+创建一个四元数，绕Y轴旋转-90°
+
+    Quaternion quatC = quatA.mult(quatB);
+
+quatC = quatA × quatB
+
+-----
+`Vector3f vectorA = new Vector3f(0, 1, 0);`
+
+创建一个值为(0, 1, 0)的向量
+
+`Vector3f vectorB = quatC.mult(vectorA);`
+
+用quatC乘vectorA，使vectorA旋转
+
+-----
+
+结果向量绕X轴旋转90°
+
+-----
+
+步骤1，分量quatA使向量绕Z轴旋转
+
+步骤2，分量quatB使向量绕Y轴旋转
+
+由此得vectorB的值为(0, 0, 1)，长度为1
+
+quatC使vectorA绕X轴旋转90°
+
+-----
+
+我们现在做B×A乘法运算
+
+`quatC = quatB.mult(quatA);`
+
+quatC = quatB × quatA
+
+-----
+
+`Vector3f vectorA = new Vector3f(0, 1, 0);`
+
+创建一个值为(0, 1, 0)的向量
+
+`Vector3f vectorB = quatC.mult(vectorA);`
+
+用quatC乘vectorA，使vectorA旋转。
+
+-----
+
+结果向量绕Z轴旋转-90°
+
+-----
+
+步骤1，分量quatB使向量绕Y轴旋转
+
+此例中，由于向量原本指向上，所以它旋转后保持不变。
+
+步骤2，分量quatA使向量绕Z轴旋转
+
+由此得vectorB的值为(1, 0, 0)，长度为1
+
+quatC使vectorA绕Z轴旋转-90°
+
+-----
+
+旋转注意事项
+
+* 不要用合并旋转或存储旋转的方式设置空间旋转
+* 最好用方向和上向量，把它们转换成四元数备用
+* 用lookAt方法简便可行(见下章)
+
+</div>
+
+<div id="lookAt" class="step slide cover markdown" data-rel-x="1080" data-rel-y="0">
+### lookAt方法
+
+利用向量创建旋转
+
+-----
+
+用lookAt创建四元数
+
+* 用lookAt可以借助上向量和视线方向创建四元数
+* 生成的四元数把垂直于上向量的向量旋转到方向向量的方向
+* lookAt主要用于旋转Y轴向上而且Z轴向前的空间
+-----
+`Vector3f upVector = new Vector3f(0, 1, 0);`
+`Vector3f direction = new Vector3f(1, 0, 0);`
+
+创建上向量和方向向量
+-----
+`Quaternion quat = new Quaternion();`
+`quat.lookAt(direction, upVector);`
+
+用方向向量和上向量创建一个四元数
+-----
+记得生成的四元数应该旋转(绕X轴)垂直于upVector的向量...
+-----
+...向着方向向量的方向旋转
+-----
+所以此例中，生成的四元数是一个绕Y轴90°的旋转
+-----
+生成的四元数可以用于，例如：
+
+使空间朝着方向向量的方向做零旋转(面对Z轴方向)
+-----
+lookAt注意事项
+
+* lookAt可用于空间，它可以根据空间位置和给出的位置向量生成方向向量
+* 这种方法可以让空间朝特定位置快速旋转
+</div>
+
+<div id="end" class="step slide markdown" data-rel-x="1080" data-rel-y="0">
+基础内容就这些...
+
+谢谢，
+
+希望这个帮助你了解JME3数学
+
+欢迎反馈 - jmecn.net
+
+回到目录
+
+[我们在wiki上的数学部分](http://wiki.jmonkeyengine.org/jme3/math.html)
+
+&copy; jmonkeyengine.org
+</div>
+
+	
+</div>
+
+<div id="impress-toolbar"></div>
+<div id="impress-help"></div>
+
+<script type="text/javascript" src="extras/highlight/highlight.pack.js"></script>
+<script type="text/javascript" src="extras/markdown/markdown.js"></script>
+
+<script type="text/javascript" src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>
