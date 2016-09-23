@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="400px" height="300px" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+
+	<!-- vectorA -->
+	<line x1="200" y1="200" x2="200" y2="20" style="stroke:rgb(255,255,255);stroke-width:4"/>
+	<path d="M200 15 L192 30 L200 25 L208 30 Z" fill="white"/>
+	<text x="130" y="50" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">vectorA</text>
+	<text x="130" y="70" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">(0,1,0)</text>
+
+	<!-- vectorB -->
+	<line x1="200" y1="200" x2="380" y2="200" style="stroke:rgb(255,255,255);stroke-width:4"/>
+	<path d="M385 200 L370 192 L375 200 L370 208 Z" fill="white"/>
+	<text x="300" y="160" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">vectorB</text>
+	<text x="300" y="180" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">(1,0,0)</text>
+	
+	<!-- vectorC -->
+	<line x1="200" y1="200" x2="150" y2="280" style="stroke:rgb(255,255,255);stroke-width:4"/>
+	<path d="M147 284 L147 268 L152 276 L161 278 Z" fill="white"/>
+	<text x="180" y="250" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">vectorC</text>
+	<text x="180" y="270" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">(0,0,1)</text>
+	
+	<!-- vectorD -->
+	<line x1="200" y1="200" x2="20" y2="200" style="stroke:rgb(255,255,255);stroke-width:4"/>
+	<path d="M15 200 L30 192 L25 200 L30 208 Z" fill="white"/>
+	<text x="50" y="160" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">vectorD</text>
+	<text x="50" y="180" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">(-1,0,0)</text>
+	
+	<!-- vectorE -->
+	<line x1="200" y1="200" x2="380" y2="20" style="stroke:rgb(255,255,255);stroke-width:4"/>
+	<path d="M383 17 L366 22 L373 27 L378 33 Z" fill="white"/>
+	<text x="250" y="50" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">vectorE</text>
+	<text x="250" y="70" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">(1,1,0)</text>
+
+</svg>
