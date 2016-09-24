@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="250px" height="230px" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+
+
+	<!-- vectorE length -->
+	<line x1="10" y1="200" x2="190" y2="20" style="stroke:rgb(255,255,255);stroke-width:3"/>
+	<path d="M193 17 L176 22 L183 27 L188 33 Z" fill="white"/>
+	<text x="20" y="80" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">|vectorE| = </text>
+	<text x="30" y="100" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">1.4142</text>
+	
+	<!-- dash -->
+	<path d="M10 200 L190 200" stroke="white" stroke-dasharray="5,5" stroke-width="2"/>
+	<text x="80" y="220" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">a = 1</text>
+	
+	<path d="M190 200 L190 20" stroke="white" stroke-dasharray="5,5" stroke-width="2"/>
+	<text x="200" y="110" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">b = 1</text>
+
+</svg>

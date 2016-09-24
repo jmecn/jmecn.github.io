@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="120px" height="138px" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+
+	<!-- x-->
+	<line x1="30" y1="90" x2="110" y2="90" style="stroke:rgb(255,255,255);stroke-width:3"/>
+	<path d="M115 90 L100 82 L105 90 L100 98 Z" fill="white"/>
+	<text x="100" y="80" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">x</text>
+
+	<!-- y-->
+	<line x1="30" y1="90" x2="30" y2="10" style="stroke:rgb(255,255,255);stroke-width:3"/>
+	<path d="M30 5 L22 20 L30 15 L38 20 Z" fill="white"/>
+	<text x="40" y="15" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">y</text>
+
+	<!-- z-->
+	<line x1="30" y1="90" x2="5" y2="130" style="stroke:rgb(255,255,255);stroke-width:3"/>
+	<path d="M2 134 L2 118 L7 126 L16 128 Z" fill="white"/>
+	<text x="20" y="130" style="font-family:Verdana;stroke:rgb(255,255,255)" fill="white">z</text>
+
+</svg>
