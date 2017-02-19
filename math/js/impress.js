@@ -467,7 +467,7 @@
         
         // `goto` API function that moves to step given with `el` parameter (by index, id or element),
         // with a transition `duration` optionally given as second parameter.
-        var goto = function ( el, duration, reason = "goto" ) {
+        var goto = function ( el, duration, reason) {
             
             if ( !initialized || !(el = getStep(el)) ) {
                 // presentation not initialized or given element is not a step
@@ -491,7 +491,7 @@
                 var event = { target: activeStep, detail : {} };
                 event.detail.next = el;
                 event.detail.transitionDuration = step.transitionDuration;
-                event.detail.reason = reason;
+                event.detail.reason = reason || "goto";
                 execPreStepLeavePlugins(event);
                 // Plugins are allowed to change the detail values
                 el = event.detail.next;
@@ -1094,7 +1094,8 @@
 
             // Query all .markdown elements and translate to HTML
             var markdownDivs = document.querySelectorAll(".markdown");
-            for (var element of markdownDivs) {
+            for(var idx=0; idx<markdownDivs.length; idx++) {
+        	var element = markdownDivs[idx];
 
             // Note: unlike the previous two, markdown.js doesn't automatically find or convert anything in 
               var slides = element.textContent.split(/^-----$/m);
