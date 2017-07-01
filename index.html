@@ -8,7 +8,7 @@
     <meta name="description" content="jMonkeyEngine是一个跨平台的3D游戏开发引擎，本网站为中国的JME爱好者所建立。jMonkeyEngine is a cross platform game develop engine, this websiet is setup by and for Chinese monkeys.">
     <meta name="author" content="yanmaoyuan;115050813@qq.com">
     <link rel="icon" href="img/favicon.ico">
-    
+
     <title>jME爱好者</title>
 
     <!-- Bootstrap -->
@@ -23,7 +23,7 @@
     <![endif]-->
   </head>
   <body>
-  	
+
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -34,13 +34,14 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#"><img src="img/text-header.png" witdh="175px" height="40px" alt="jME爱好者"/></a>
-          
+
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">主页</a></li>
             <li><a href="http://blog.jmecn.net">博客</a></li>
             <li><a href="http://bbs.jmecn.net">社区</a></li>
+            <li><a href="http://www.jmecn.net/tutorial-for-beginners/" target="_blank">教程</a></li>
             <li><a href="http://jmonkeyengine.github.io/wiki/" target="_blank">wiki</a></li>
             <li><a href="https://github.com/jMonkeyEngine/sdk/releases/tag/stable" target="_blank">下载</a></li>
             <li><a href="https://github.com/jMonkeyEngine/jmonkeyengine" target="_blank">源码</a></li>
@@ -76,7 +77,7 @@
           <p>一旦用对了，Java可以做得飞快！毫不客气地说，Java总是比C++更容易做好。我们为Java程序猿提供制作高性能3D游戏的工具，可以媲美任何其它3D游戏引擎，而且开发者再也不必担心编译代码的事了。</p>
         </div>
         <div class="col-md-4">
-          <h2>黑客的安全区</h2>
+          <h2>黑客的避难所</h2>
           <p>jME在设计之初就定义成可扩展的，它不会告诉你怎么制作游戏。同时jME采用新的BSD开源协议，意味着用户可以自由使用jME的代码做任何事情。如果你希望分享自己做的东西，可以通过jME3 SDK的专属插件把它共享，并且可以自动更新。</p>
         </div>
         <div class="col-md-4">
@@ -88,7 +89,7 @@
           <p>我们没有理由不做好文档，事实上jME拥有极其丰富的文档，并且持续扩充。仔细研读jME的wiki网页，那儿有几百页的内容详细说明jME3的所有事项。不但如此，jME3还有开发者社区，那儿很热闹而且还有各种最新的帮助。</p>
         </div>
       </div>
-      
+
       <h1>图形</h1>
       <div class="row">
       	<div class="col-md-4">
@@ -97,14 +98,14 @@
       	  </div>
       	  <p>jME3提供所有常规手段来模拟烛光、阳光、闪光和全局光照，阴影效果用类似<abbr title="平行光阴影映射">PSSM</abbr>和<abbr title="屏幕空间环境光遮蔽">SSAO</abbr>等技术实现。对于Android系统，我们推荐使用<abbr title="baked shadows">烘焙阴影</abbr>效果。</p>
       	</div>
-      	
+
       	<div class="col-md-4">
       	  <div class="jme3_card_title shader">
       	    <h2>染色器和材质</h2>
       	  </div>
       	  <p>jME3的材质系统完全基于染色器(Shader)技术实现，采用称为Shader Nodes的创新设计来将染色器超级模块化，使其能够在可视化编辑器中进行编辑。当然，你依然可以手动编写染色器代码。</p>
       	</div>
-      	
+
       	<div class="col-md-4">
       	  <div class="jme3_card_title filter">
       	    <h2>滤镜和特效</h2>
@@ -122,14 +123,14 @@
       	  <p>应用程序状态(AppState)是创建应用程序的基本组件。它们可以帮你把应用程序分割成几个逻辑模块，也可以用来快速扩展基础应用程序。</p>
       	  <p>AppState还可以在其它应用程序中复用，这样你就能迅速创建自己的AppState库，把其它扩展程序纳入到自己的应用程序里。</p>
       	</div>
-      	
+
       	<div class="col-md-4">
       	  <div class="jme3_card_title control">
       	    <h2>自定义控件</h2>
           </div>
       	  <p>自定义控件(Custom Control)和AppState类似，但是它们是基于更小的场景对象级别的。用自定义控件，你可以给场景图中的对象添加功能，赋予它们生命，控制它，或者把它合并到另外的工作流中。</p>
       	</div>
-      	
+
       	<div class="col-md-4">
           <div class="jme3_card_title input">
       	    <h2>输入</h2>
@@ -137,7 +138,7 @@
       	  <p>基于统一标准的输入用具，jME3可以广泛应用于各种平台，允许用户使用键盘、手柄和触屏等不同方式来在操作同一界面。</p>
       	</div>
       </div>
- 
+
       <h1>通用组件</h1>
       <div class="row">
       	<div class="col-md-4">
@@ -146,14 +147,14 @@
           </div>
           <p>jME3依赖jBullet实现物理仿真。jBullet是<a href="http://bulletphysics.org/wordpress/">Bullet Physics Library</a>的一个Java接口，业内顶尖高手都喜欢用它。</p>
       	</div>
-      	
+
       	<div class="col-md-4">
       	  <div class="jme3_card_title terrain">
       	    <h2>地形</h2>
           </div>
       	  <p>JME3 SDK内嵌地形编辑器(TerraMonkey)可以用来创建地形。你也可以导入<abbr title="HeightMap">高度图</abbr>，把它放在<abbr title="SkyBox，和SkyDome同样用于制作3D天空场景的技术">天空盒</abbr>中，添加光照，享受自动<abbr title="Level of Detail 层次细节">LOD</abbr>优化。</p>
       	</div>
-      	
+
       	<div class="col-md-4">
       	  <div class="jme3_card_title cinematics">
       	    <h2>电影制作</h2>
@@ -167,7 +168,7 @@
           </div>
       	  <p><abbr title="jME3的网络组件">SpiderMonkey</abbr>可以帮助你开发联网游戏。如果你已经熟知UDP、TCP、压缩和线程安全等概念，就可以直接使用它了。</p>
       	</div>
-      	
+
       	<div class="col-md-4">
       	  <div class="jme3_card_title gui">
       	    <h2>图形用户界面</h2>
@@ -175,7 +176,7 @@
       	  <p>NiftyGUI是一个独立的库，它与jME3整合在一起作为系统默认的GUI工具。设计人员和开发人员都可以用XML或者Java构建界面。不过由于每个程序猿都是不一样的，所以我们提供两套独立的GUI插件供选择。</p>
       	</div>
       </div>
-      
+
       <hr>
 
       <footer>
@@ -183,7 +184,7 @@
         <p class="text-center"><a href="http://www.miitbeian.gov.cn/" target="_blank">鄂ICP备16014743号</a></p>
       </footer>
     </div> <!-- /container -->
-    
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
@@ -191,4 +192,3 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
-
